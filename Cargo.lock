@@ -5520,9 +5520,7 @@ dependencies = [
 
 [[package]]
 name = "spacetime_physics"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a93069739dc7d573692c059bc2aab407861a1bd3816a591e5ca7b24166d8ba1"
+version = "0.1.1"
 dependencies = [
  "bon",
  "log",

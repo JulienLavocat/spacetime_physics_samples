@@ -11,4 +11,4 @@ crate-type = ["cdylib"]
 [dependencies]
 spacetimedb = "1.2.0"
 log = "0.4"
-spacetime_physics = "0.1.0"
+spacetime_physics = {path = "../../../dev/stdb/spacetime_physics/spacetime_physics"}
