@@ -9,4 +9,7 @@ client:
 client-release:
     cargo run -p client --release
 
+bindings:
+    spacetime generate --lang rust --out-dir ./client/src/module_bindings --project-path server
+
 sc: server client

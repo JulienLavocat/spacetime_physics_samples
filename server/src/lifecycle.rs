@@ -1,5 +1,5 @@
 use spacetime_physics::{
-    schedule_physics_tick, Collider, PhysicsWorld, RigidBody, RigidBodyProperties,
+    math::Vec3, schedule_physics_tick, Collider, PhysicsWorld, RigidBody, RigidBodyProperties,
 };
 use spacetimedb::{reducer, ReducerContext, Table};
 
@@ -26,6 +26,16 @@ pub fn init(ctx: &ReducerContext) {
     // Shared collider information for all players
     Collider::capsule(1, 0.5, 1.8)
         .id(PLAYER_RB_COLLIDER)
+        .insert(ctx);
+
+    // Floor
+    let floor_collider_id = Collider::cuboid(world.id, Vec3::new(200.0, 0.1, 200.0))
+        .insert(ctx)
+        .id;
+    RigidBody::builder()
+        .collider_id(floor_collider_id)
+        .properties_id(PLAYER_RB_PROPERTIES)
+        .build()
         .insert(ctx);
 }
 

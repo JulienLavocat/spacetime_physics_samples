@@ -11,7 +11,7 @@ mod tables;
 mod utils;
 
 const PLAYER_RB_PROPERTIES: u64 = 1;
-const PLAYER_RB_COLLIDER: u64 = 1;
+const PLAYER_RB_COLLIDER: u64 = 2;
 const MAIN_WORLD_ID: u64 = 1;
 
 #[reducer]
